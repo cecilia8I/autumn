@@ -1,0 +1,91 @@
+body.home {
+  
+  background: #E6E6FA; 
+ 
+}
+
+body.fall {
+  background-color: #a34100
+}
+
+body.invite {
+  display: flex;                 /* enable flexbox */
+  justify-content: center;       /* horizontal center */       
+  background: 	#e0b8c2;
+  font-family: Maple Memories;
+}
+
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;   /* space between buttons */
+  margin-top: 20px;
+}
+
+button, a.btn {
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none; /* remove underline if using <a> */
+  color: white;
+  transition: transform 0.2s;
+}
+
+button:hover, a.btn:hover {
+  transform: scale(1.1);
+}
+
+.yes {
+  background: #ba9eb5;
+}
+
+.no {
+  background: #8c80a6;
+}
+
+.btn {
+  display: inline-block;
+  background:	#7b3e19;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+   position: absolute;
+  top: 20px;
+  right: 20px;
+  text-decoration: none;   /* removes underline */
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #c75146;
+  transform: scale(1.05);  /* hover grows a bit */
+}
+.box {
+  background-color: #ebcfb2;  
+  padding: 16px;
+  justify-content: flex-end;
+  border-radius: 10px;
+}
+
+.button {
+  position: fixed;       /* stays in the corner even when you scroll */
+  bottom: 20px;          /* distance from bottom */
+  right: 20px;           /* distance from right */
+  background: #666699;
+  color: white;
+  padding: 6px 10px;     /* smaller padding */
+  font-size: 14px;       /* smaller text */
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  margin: 20px auto;  /* auto centers */
+  width: 300px;
+}
+

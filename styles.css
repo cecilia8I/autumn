@@ -98,3 +98,41 @@ img {
   width: 300px;
   max-width: 100%;         /* ✅ scale on small screens */
 }
+
+/* 1) Make the vertical centering stable on mobile
+   - svh/dvh track the REAL visible area, not the changing address bar */
+body.invite {
+  min-height: 100svh;   /* modern iOS/Android */
+  /* fallback for very old browsers: */
+  min-height: 100vh;
+}
+
+/* 2) Avoid layout “jumps” from hover on touch devices */
+@media (hover: none) {
+  button:hover, a.btn:hover {
+    transform: none !important;
+  }
+}
+
+/* 3) Prevent unexpected overflow that can cause sideways jiggle */
+html, body {
+  overflow-x: hidden;
+}
+
+/* 4) Make widths and padding predictable (prevents tiny shifts) */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 5) Ensure images don’t reflow as they load */
+img {
+  display: block;
+  height: auto;          /* keep aspect ratio */
+  max-width: 100%;       /* never overflow */
+}
+
+/* 6) If you use a webfont that loads late, keep text stable */
+body {
+  font-family: Maple Memories, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}

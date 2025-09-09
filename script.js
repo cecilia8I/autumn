@@ -8,6 +8,6 @@ function sayYes() {
 function sayNo() {
   alert("I'm sorry this is not an option");
   alert("Choose again");
-  alert(`Press "Close" if you want to go on a sunset date with me`)
+  alert(`Press "Close" if you want to go on a cozy date night with me`)
   alert("Okay COOL!")
 }
